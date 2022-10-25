@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS" />
+    <meta name="description" content="HTML, CSS, and JavaScript" />
+
+    <title>Webpage</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,900;1,100;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="sub-header">
+      <nav>
+        <a href="index.html"></a>
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="conversion.html">CONVERSION</a></li>
+            <li><a href="taxcalculator.html">TAX CALCULATOR</a></li>
+            <li><a href="f&s&a.html">FACTORIAL AND SUM AND AVERAGE</a></li>
+            <li><a href="payroll.html">PAYROLL</a></li>
+          </ul>
+        </div>
+      </nav>
+      <h1>Conversion</h1>
+      <p>
+        Celsius to Fahrenheit, Fahrenheit to Celsius, Meters to Feet,<br />
+        and Feet to Meters
+      </p>
+
+<!--Conversion-->
+
+<div id="container">
+  <input type="number" id="input" placeholder="Enter positive integer">
+  <button id="meter">Convert to Meter</button>
+  <button id="feet">Convert to Feet</button>
+  <button id="celsius">Convert to Celsius</button>
+  <button id="fahrenheit">Convert to Fahrenheit</button>
+  <input type="text" id="output" placeholder="Output">
+
+</div>
+<script>
+  // Conversion//
+
+let meterbtn = document.getElementById("meter");
+let feetbtn = document.getElementById("feet");
+let celsiusbtn = document.getElementById("celsius");
+let fahrenheitbtn = document.getElementById("fahrenheit");
+
+meterbtn.addEventListener('click', function(){
+    let input = document.getElementById('input').value;
+    document.getElementById('output').value = input/3.281;
+
+
+})
+
+feetbtn.addEventListener('click', function(){
+    let input = document.getElementById('input').value;
+    document.getElementById('output').value = input * 3.281;
+    
+})
+
+celsiusbtn.addEventListener('click', function(){
+    let input = document.getElementById('input').value;
+    document.getElementById('output').value = (input-32) * 5/9;
+
+
+})
+
+fahrenheitbtn.addEventListener('click', function(){
+    let input = document.getElementById('input').value;
+    document.getElementById('output').value = (input * 9/5) +32;
+
+
+})
+
+</script>
+
+
+  </body>
+</html>

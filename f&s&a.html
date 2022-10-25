@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webpage</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,900;1,100;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="sub-header3">
+      <nav>
+        <a href="index.html"></a>
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="conversion.html">CONVERSION</a></li>
+            <li><a href="taxcalculator.html">TAX CALCULATOR</a></li>
+            <li><a href="f&s&a.html">FACTORIAL AND SUM AND AVERAGE</a></li>
+            <li><a href="payroll.html">PAYROLL</a></li>
+          </ul>
+        </div>
+      </nav>
+      <h1>Factorial, Sum, and Average of N numbers</h1>
+
+      <!--Factorial of Nth number-->
+  <div id="FactorialOfN">
+
+      <label id="factorial" for="nlimit">The nth factorial:</label>
+      <input id="nlimit" type="number" placeholder="Input here"/>
+      <button id="Factorialbtn" onclick="ShowNumbers()">Calculate</button>
+  
+      <h3 id="Fresult"></h3>
+  
+
+    <script>
+      function ShowNumbers() {
+        var nlimit, i, ntext;
+
+        nlimit = document.getElementById("nlimit").value;
+
+        ntext = 1;
+        i = 1;
+
+        while (i <= nlimit) {
+          ntext = ntext * i;
+          i++;
+        }
+
+        console.log(nlimit);
+        console.log(ntext);
+
+        document.getElementById("Fresult").innerHTML =
+          "The " + nlimit + "th factorial is " + ntext;
+      }
+    </script>
+    </div>
+   
+
+<!--Sum of N numbers-->
+
+
+  <div id="SumOfNumbers">
+      <label id="sumofn" for="limit">The sum of the first n numbers:</label>
+      <input id="limits" type="number" placeholder="Input here" />
+      <button id="Sumbtn" onclick="ShowSum()">Calculate</button>
+    
+    <h3 id="Title"></h3>
+   
+    <script>
+      function ShowSum() {
+        var nlimit, i, Numtext;
+
+        nlimit = document.getElementById("limits").value;
+
+        Numtext = 0;
+        i = 1;
+
+        do {
+          Numtext += i;
+          i++;
+        } while (i <= nlimit);
+
+      
+
+        document.getElementById("Title").innerHTML =
+          "The sum of " + nlimit + " natural numbers are " +Numtext;
+      }
+    </script>
+    </div>
+  
+
+<!--Average of N Numbers-->
+
+  <div id="AverageOfN">
+      <label id="averageofn" for="N-limit"> The Average of the first n numbers:</label>
+      <input id="N-limit" type="number" placeholder="Input here" />
+      <button id="Averagebtn" onclick="ShowAverage()">Calculate</button>
+  
+    <h3 id="N-title"></h3>
+
+    <script>
+      function ShowAverage() {
+        var Nlimit, i, Ntext, average;
+
+        Nlimit = document.getElementById("N-limit").value;
+
+        Ntext = 0;
+        i = 1;
+        average = 0;
+
+        for (i = 1; i <= Nlimit; i++) {
+          Ntext += i;
+          average = Ntext / Nlimit;
+        }
+
+        document.getElementById("N-title").innerHTML =
+          "The average of the first " + Nlimit + " natural numbers are " +average;
+
+      }
+    </script>
+    </div>
+  </body>
+</html>

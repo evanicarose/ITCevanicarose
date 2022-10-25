@@ -1,0 +1,547 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(3, 3, 117);
+    display: block;
+    margin: auto;
+    transition: 0.4s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+}
+
+.text-box h1{
+    font-size: 48px;
+}
+
+.text-box p{
+    margin: 20px;
+    font-size: 14px;
+    color: white;
+
+}
+
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(conversion.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.sub-header h1{
+    text-align: center;
+    width: 100%;
+    color: white;
+    top: 0%;
+    left: 50%;
+    font-size: 60px;
+    margin-top: 100px;
+    
+}
+
+.sub-header p{
+    text-align: center;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+
+#container{
+    height: 200px;
+    width: 500px;
+    background-color: white;
+    display: grid;
+    margin: 100px;
+    margin-left: 4.8in;
+    border: 2px solid black;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 50px 50px 1fr;
+    justify-self: center;
+    align-self: center;
+
+
+}
+
+#input{
+    height: 25px;
+    width: 250px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    justify-self: center;
+    align-self: center;
+}
+
+#meter{
+    height: 35px;
+    width: 125px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    justify-self: center;
+
+}
+
+#feet{
+    height: 35px;
+    width: 125px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    justify-self: center;
+
+  
+}
+
+#celsius{
+    height: 35px;
+    width: 125px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    justify-self: center;
+}
+
+#fahrenheit{
+    height: 35px;
+    width: 125px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    justify-self: center;
+
+}
+
+#output{
+    height: 25px;
+    width: 250px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    justify-self: center;
+  
+}
+
+.sub-header2{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(conversion.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.sub-header2 label{
+    text-align: center;
+    color: black;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    font-size: 18px;
+    grid-row-end: 2;
+    grid-row-start: 1;
+    margin-top: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: black;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    font-size: 18px;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    margin-top: 10px;
+}
+
+.sub-header2 h1{
+    text-align: center;
+    width: 100%;
+    color: white;
+    top: 0%;
+    left: 50%;
+    font-size: 60px;
+    margin-top: 100px;
+    
+}
+
+#TaxCalculator{
+    height: 230px;
+    width: 500px;
+    background-color: white;
+    display: grid;
+    margin: 100px;
+    margin-left: 4.8in;
+    margin-top: 2in;
+    border: 2px solid black;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-self: center;
+    align-self: center;
+
+}
+
+#income{
+    height: 25px;
+    width: 250px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: center;
+
+}
+
+#evalbutton{
+    height: 25px;
+    width: 250px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+}
+
+#label label-income {
+    height: 25px;
+    width: 250px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    justify-self: center;
+}
+
+.sub-header3{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(conversion.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.sub-header3 h1{
+    text-align: center;
+    width: 100%;
+    color: white;
+    top: 0%;
+    left: 50%;
+    font-size: 60px;
+    margin-top: 100px;
+    
+}
+
+#FactorialOfN{
+    height: 230px;
+    width: 500px;
+    background-color: white;
+    display: grid;
+    margin: 100px;
+    margin-left: 4.8in;
+    margin-top: 2in;
+    border: 2px solid black;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-self: center;
+    align-self: center;
+
+}
+
+label{
+    color: black;
+}
+
+#nlimit{
+    height: 25px;
+    width: 250px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: center;
+    align-self: center;
+    margin-top: 0.3in;
+}
+
+#Factorialbtn{
+    height: 25px;
+    width: 250px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+    align-self: center;
+}
+
+#factorial{
+    height: 25px;
+    width: 250px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-self: center;
+    margin-top: 10px;
+}
+
+h3#Fresult{
+    text-align: center;
+    color: black;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#SumOfNumbers{
+    height: 230px;
+    width: 500px;
+    background-color: white;
+    display: grid;
+    margin: 100px;
+    margin-left: 4.8in;
+    margin-top: 2in;
+    border: 2px solid black;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-self: center;
+    align-self: center;
+
+}
+
+label{
+    color: black;
+}
+
+#limits{
+    height: 25px;
+    width: 250px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: center;
+    align-self: center;
+    margin-top: 0.3in;
+}
+
+#Sumbtn{
+    height: 25px;
+    width: 250px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+    align-self: center;
+}
+
+#sumofn{
+    height: 25px;
+    width: 250px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-self: center;
+    margin-top: 10px;
+}
+
+h3#Title{
+    text-align: center;
+    color: black;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#AverageOfN{
+    height: 230px;
+    width: 500px;
+    background-color: white;
+    display: grid;
+    margin: 100px;
+    margin-left: 4.8in;
+    margin-top: 2in;
+    border: 2px solid black;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-self: center;
+    align-self: center;
+
+}
+
+label{
+    color: black;
+}
+
+#N-limit{
+    height: 25px;
+    width: 250px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: center;
+    align-self: center;
+    margin-top: 0.3in;
+}
+
+#Averagebtn{
+    height: 25px;
+    width: 250px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+    align-self: center;
+}
+
+#averageofn{
+    height: 25px;
+    width: 250px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-self: center;
+    margin-top: 10px;
+}
+
+h3#N-title{
+    text-align: center;
+    color: black;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.sub-header4{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(conversion.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.sub-header4 h1{
+    text-align: center;
+    width: 100%;
+    color: white;
+    top: 0%;
+    left: 50%;
+    font-size: 60px;
+    margin-top: 100px;
+    
+}
+
+#simplepayroll{
+    text-align: center;
+    width: 100%;
+    height: 5px;
+    font-size: 16px;
+    margin-top: 200px;
+    margin-block-end: 1cm;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+   
+
+}
+
+#options{
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 150px;
+}
+
+#cart{
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    color: black;
+    padding-bottom: 2in;
+    margin-top: 1in;
+    margin-left: center;
+    margin-right: center;
+    text-align: justify;
+    
+}
